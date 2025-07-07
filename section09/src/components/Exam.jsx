@@ -1,5 +1,7 @@
 import { useReducer } from "react";
 
+// reducer : 변환기
+// -> 상태를 실제로 변화시키는 변환기 역할
 function reducer(state, action) {
   switch (action.type) {
     case "INCREASE":
@@ -14,6 +16,8 @@ function reducer(state, action) {
 }
 
 function Exam() {
+  // dispatch : 발송하다, 급송하다
+  // -> 상태 변화가 있어야 한다는 사실을 알리는, 발송하는 함수
   const [count, dispatch] = useReducer(reducer, 0);
 
   return (
